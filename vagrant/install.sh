@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Script to set up a Django project on Vagrant.
-INSTALL_SCRIPT_DIR="$( cd "$( dirname "$0" )" && pwd )"
 DATABASE_USERNAME="test"
 DATABASE_PASSWORD="test_password"
 DATABASE_NAME="test_db"
@@ -32,7 +31,7 @@ apt-get install -y git
 # Postgresql
 if ! command -v psql; then
     apt-get install -y postgresql-$PGSQL_VERSION libpq-dev
-    cp $INSTALL_SCRIPT_DIR/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
+    cp /vagrant/vagrant/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
     /etc/init.d/postgresql reload
 fi
 
