@@ -22,7 +22,9 @@ manage_py_path = "/vagrant/my_app"
 
 (3) By default, this configuration syncs the directory in which the `Vagrantfile` resides with the `/vagrant` folder on the virtual machine. If you'd like to change that, you can in the `Vagrantfile`. Note that you may have to change the `manage_py_path` variable in `vmanage.py` for everything to work if you do this.
 
-(4) You should now be able to run `python manage.py migrate` (or substitue any command for the `migrate`) and the script will proxy it to the appropriate ssh command for the vagrant machine. The virtual machine will run an instance of postgres and install everything from your requirements.txt. Presto!
+(4) `vagrant up --provision`
+
+(5) You should now be able to run `python manage.py migrate` (or substitue any command for the `migrate`) and the script will proxy it to the appropriate ssh command for the vagrant machine. The virtual machine will run an instance of postgres and install everything from your requirements.txt. Presto!
 
 ## Questions or contributing
 This is mostly just a utility for me at the time of writing. If you'd like to use it also and you have some kind of question or would like to contribute to this repo, open and issue/pull request!
