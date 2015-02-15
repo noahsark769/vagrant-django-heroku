@@ -2,8 +2,9 @@ import os
 import sys
 
 other_commands = ""
+manage_py_path = "/vagrant"
 
-BASE_COMMAND = "vagrant ssh -c 'source ~/venv/bin/activate; " + other_commands + " cd /vagrant/members_only && %s'"
+BASE_COMMAND = "vagrant ssh -c 'source ~/venv/bin/activate; " + other_commands + " cd " + manage_py_path + " && %s'"
 
 def print_and_run_system(cmd):
     print "[Exec] " + cmd

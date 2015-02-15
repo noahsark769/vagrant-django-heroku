@@ -32,7 +32,7 @@ apt-get install -y git
 # Postgresql
 if ! command -v psql; then
     apt-get install -y postgresql-$PGSQL_VERSION libpq-dev
-    cp $SCRIPT_DIR/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
+    cp $INSTALL_SCRIPT_DIR/pg_hba.conf /etc/postgresql/$PGSQL_VERSION/main/
     /etc/init.d/postgresql reload
 fi
 
